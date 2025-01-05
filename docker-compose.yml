@@ -1,0 +1,14 @@
+services:
+  python-3-apache2-wsgi-bookworm:
+    image: drvelasquezq/python-3-apache2-wsgi-bookworm:v1.0
+    container_name: container-python-3-apache2-wsgi-bookworm
+    env_file:
+      - .env
+    volumes:
+      # descomentar si se quiere reemplazar
+      # - "./var/www/wsgi-scripts/wsgi.py:/var/www/wsgi-scripts/wsgi.py"
+      - "./scripts/run.sh:/scripts/run.sh"
+    command: [ "/bin/bash", "/scripts/run.sh" ]
+    ports:
+      - "8180:80"
+      - "8000:8000"
