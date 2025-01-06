@@ -1,5 +1,5 @@
 # Puede visualizarse en ejecución en: 
-<a href="https://test-python.drvelasquezq.site:8000" target="_blank">https://test-python.drvelasquezq.site:8000</a>
+<a href="https://test-python-wsgi.drvelasquezq.site" target="_blank">https://test-python-wsgi.drvelasquezq.site</a>
 (prueba de instalación exitosa)
 
 <a href="https://test-python.drvelasquezq.site" target="_blank">https://test-python.drvelasquezq.site</a>
@@ -30,7 +30,7 @@ docker compose up -d
 
 luego podrá ingresar a: http://localhost:8000 o http://localhost:8180
 
-podría también cambiar: var/www/wsgi-scripts/wsgi.py descomentando en docker-compose.yml la línea: - "./var/www/wsgi-scripts/wsgi.py:/var/www/wsgi-scripts/wsgi.py" (tumbar contenedor y volver a montar)
+podría también cambiar: var/www/wsgi-scripts/wsgi.py descomentando en docker-compose.yml la línea: - "./var/www/wsgi-scripts/wsgi.py:/var/www/wsgi-scripts/wsgi.py" (bajar contenedor y volver a subir)
 
 ### Ejemplo para construir la imagen: 
 ```bash
