@@ -15,6 +15,9 @@ Este proyecto da los pasos para utilizar y crear imagen de docker que ejecuta un
 <li>Debian: Bookworm</li>
 </ul>
 
+# Docker hub:
+[https://hub.docker.com/r/drvelasquezq/python-3-apache2-wsgi-bookworm](https://hub.docker.com/r/drvelasquezq/python-3-apache2-wsgi-bookworm)
+
 # Uso
 
 ```bash
@@ -30,7 +33,7 @@ docker compose up -d
 
 luego podrá ingresar a: http://localhost:8000 o http://localhost:8180
 
-podría también cambiar: var/www/wsgi-scripts/wsgi.py descomentando en docker-compose.yml la línea: - "./var/www/wsgi-scripts/wsgi.py:/var/www/wsgi-scripts/wsgi.py" (bajar contenedor y volver a subir)
+podría también cambiar: /var/www/wsgi-scripts/wsgi.py descomentando en docker-compose.yml la línea: - "./var/www/wsgi-scripts/wsgi.py:/var/www/wsgi-scripts/wsgi.py" (bajar contenedor y volver a subir)
 
 ### Ejemplo para construir la imagen: 
 ```bash
