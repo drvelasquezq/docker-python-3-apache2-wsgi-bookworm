@@ -31,7 +31,7 @@ cp .env.dev .env
 docker compose up -d
 ```
 
-luego podrá ingresar a: http://localhost:8000 o http://localhost:8180
+luego podrá ingresar a: http://localhost:8180 o http://localhost:8280
 
 podría también cambiar: /var/www/wsgi-scripts/wsgi.py descomentando en docker-compose.yml la línea: - "./var/www/wsgi-scripts/wsgi.py:/var/www/wsgi-scripts/wsgi.py" (bajar contenedor y volver a subir)
 
@@ -47,12 +47,12 @@ docker run --name container-python-3-apache2-wsgi-bookworm drvelasquezq/python-3
 
 ## Ejemplo para crear contenedor con la imagen y ejecutarlo de manera interactiva:
 ```bash
-docker run --tty --interactive -p 8180:80 -p 8000:8000 --name container-python-3-apache2-wsgi-bookworm drvelasquezq/python-3-apache2-wsgi-bookworm:v1.0 bash
+docker run --tty --interactive -p 8180:80 -p 8280:8000 --name container-python-3-apache2-wsgi-bookworm drvelasquezq/python-3-apache2-wsgi-bookworm:v1.0 bash
 ```
 
 ## Ejemplo para crear contenedor con la imagen y ejecutarlo en segundo plano
 ```bash
-docker run -d -p 8180:80 -p 8000:8000 --name container-python-3-apache2-wsgi-bookworm drvelasquezq/python-3-apache2-wsgi-bookworm:v1.0
+docker run -d -p 8180:80 -p 8280:8000 --name container-python-3-apache2-wsgi-bookworm drvelasquezq/python-3-apache2-wsgi-bookworm:v1.0
 ```
 ```bash
 # para luego ingresar al contenedor
