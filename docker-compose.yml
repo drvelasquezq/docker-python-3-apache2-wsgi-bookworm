@@ -11,4 +11,4 @@ services:
     command: [ "/bin/bash", "/scripts/run.sh" ]
     ports:
       - "8180:80"
-      - "8000:8000"
+      - "8280:8000"
